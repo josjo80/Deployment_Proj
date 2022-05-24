@@ -1,0 +1,6 @@
+[core]
+    remote = driveremote
+['remote "localremote"']
+    url = ../../local_remote_dir
+['remote "driveremote"']
+    url = s3://johnsonmldevops/artifacts/

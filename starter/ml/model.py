@@ -1,4 +1,6 @@
 from sklearn.metrics import fbeta_score, precision_score, recall_score
+from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
+import joblib
 
 
 # Optional: implement hyperparameter tuning.
@@ -17,8 +19,11 @@ def train_model(X_train, y_train):
     model
         Trained machine learning model.
     """
+    # clf = AdaBoostClassifier()
+    clf = RandomForestClassifier(n_estimators=75, max_depth=15)
+    clf = clf.fit(X_train, y_train)
 
-    pass
+    return clf
 
 
 def compute_model_metrics(y, preds):
@@ -48,7 +53,7 @@ def inference(model, X):
 
     Inputs
     ------
-    model : ???
+    model : sklearn model
         Trained machine learning model.
     X : np.array
         Data used for prediction.
@@ -57,4 +62,9 @@ def inference(model, X):
     preds : np.array
         Predictions from the model.
     """
-    pass
+    return model.predict(X)
+
+def save_model(model, encoder, lb):
+    joblib.dump(model, 'rf_model.pkl')
+    joblib.dump(encoder, 'encoder.pkl')
+    joblib.dump(lb, 'label_enc.pkl')
