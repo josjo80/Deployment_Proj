@@ -6,18 +6,19 @@ data = {
 "workclass": "State-gov",
 "fnlgt": 327886,
 "education": "Doctorate",
-"education-num": 16,
-"marital-status": "Divorced",
+"education_num": 16,
+"marital_status": "Divorced",
 "occupation": "Prof-specialty",
 "relationship": "Own-child",
 "race": "White",
 "sex": "Male",
-"capital-gain": 0,
-"capital-loss": 0,
-"hours-per-week": 50,
-"native-country": "United-States",
+"capital_gain": 0,
+"capital_loss": 0,
+"hours_per_week": 50,
+"native_country": "United-States",
 "salary": ">50K"}
 
-r = requests.post("https://mldevopsdemo2.herokuapp.com/predict/", data=json.dumps(data))
+r = requests.post("http://127.0.0.1:8000/prediction/", data=json.dumps(data))
+#r = requests.post("https://mldevopsdemo2.herokuapp.com/predict/", data=json.dumps(data))
 
 print(r.json())

@@ -59,7 +59,11 @@ def slice_testing(df, model, cat_features, encoder, lb):
 
             preds = inference(model,x)
             precision, recall, fbeta = compute_model_metrics(y, preds)
-            print(f"Slice testing on {cats} with value {e}")
-            print(f"Precision {precision}, Recall {recall}, FBeta {fbeta}")
+            with open('slice_output.txt', 'a') as fil:
+                fil.write(f"Slice testing on {cats} with value {e} \n")
+                fil.write(f"Precision {precision} \n")
+                fil.write(f"Recall {recall} \n")
+                fil.write(f"Fbeta {fbeta} \n")
+                fil.write("\n")
 
 slice_testing(data, trained_model, cat_features, train_encoder, train_lb)

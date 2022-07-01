@@ -1,0 +1,510 @@
+Slice testing on workclass with value State-gov 
+Precision 0.8422712933753943 
+Recall 0.7563739376770539 
+Fbeta 0.7970149253731343 
+
+Slice testing on workclass with value Self-emp-not-inc 
+Precision 0.8299065420560747 
+Recall 0.6132596685082873 
+Fbeta 0.7053216838760922 
+
+Slice testing on workclass with value Private 
+Precision 0.8512445095168375 
+Recall 0.5857344348176506 
+Fbeta 0.693960372403915 
+
+Slice testing on workclass with value Federal-gov 
+Precision 0.8703071672354948 
+Recall 0.6873315363881402 
+Fbeta 0.7680722891566265 
+
+Slice testing on workclass with value Local-gov 
+Precision 0.8050682261208577 
+Recall 0.6693679092382496 
+Fbeta 0.7309734513274336 
+
+Slice testing on workclass with value ? 
+Precision 0.9134615384615384 
+Recall 0.4973821989528796 
+Fbeta 0.6440677966101696 
+
+Slice testing on workclass with value Self-emp-inc 
+Precision 0.8605769230769231 
+Recall 0.8633440514469454 
+Fbeta 0.8619582664526486 
+
+Slice testing on workclass with value Without-pay 
+Precision 1.0 
+Recall 1.0 
+Fbeta 1.0 
+
+Slice testing on workclass with value Never-worked 
+Precision 1.0 
+Recall 1.0 
+Fbeta 1.0 
+
+Slice testing on education with value Bachelors 
+Precision 0.7861507128309573 
+Recall 0.8689779378658262 
+Fbeta 0.825491873396065 
+
+Slice testing on education with value HS-grad 
+Precision 0.9439834024896265 
+Recall 0.2716417910447761 
+Fbeta 0.421882243857209 
+
+Slice testing on education with value 11th 
+Precision 1.0 
+Recall 0.38333333333333336 
+Fbeta 0.5542168674698795 
+
+Slice testing on education with value Masters 
+Precision 0.8416030534351145 
+Recall 0.9197080291970803 
+Fbeta 0.8789237668161435 
+
+Slice testing on education with value 9th 
+Precision 1.0 
+Recall 0.25925925925925924 
+Fbeta 0.4117647058823529 
+
+Slice testing on education with value Some-college 
+Precision 0.8914373088685015 
+Recall 0.42033165104542175 
+Fbeta 0.5712885840274374 
+
+Slice testing on education with value Assoc-acdm 
+Precision 0.9072847682119205 
+Recall 0.5169811320754717 
+Fbeta 0.658653846153846 
+
+Slice testing on education with value Assoc-voc 
+Precision 0.9433962264150944 
+Recall 0.4155124653739612 
+Fbeta 0.5769230769230769 
+
+Slice testing on education with value 7th-8th 
+Precision 1.0 
+Recall 0.3 
+Fbeta 0.4615384615384615 
+
+Slice testing on education with value Doctorate 
+Precision 0.8912386706948641 
+Recall 0.9640522875816994 
+Fbeta 0.9262166405023547 
+
+Slice testing on education with value Prof-school 
+Precision 0.921875 
+Recall 0.9763593380614657 
+Fbeta 0.9483352468427095 
+
+Slice testing on education with value 5th-6th 
+Precision 1.0 
+Recall 0.3125 
+Fbeta 0.47619047619047616 
+
+Slice testing on education with value 10th 
+Precision 1.0 
+Recall 0.22580645161290322 
+Fbeta 0.3684210526315789 
+
+Slice testing on education with value 1st-4th 
+Precision 1.0 
+Recall 0.3333333333333333 
+Fbeta 0.5 
+
+Slice testing on education with value Preschool 
+Precision 1.0 
+Recall 1.0 
+Fbeta 1.0 
+
+Slice testing on education with value 12th 
+Precision 1.0 
+Recall 0.30303030303030304 
+Fbeta 0.4651162790697675 
+
+Slice testing on marital-status with value Never-married 
+Precision 0.9954545454545455 
+Recall 0.4460285132382892 
+Fbeta 0.6160337552742615 
+
+Slice testing on marital-status with value Married-civ-spouse 
+Precision 0.833932286741063 
+Recall 0.6588463837417813 
+Fbeta 0.7361215460389013 
+
+Slice testing on marital-status with value Divorced 
+Precision 0.9849246231155779 
+Recall 0.42332613390928725 
+Fbeta 0.5921450151057401 
+
+Slice testing on marital-status with value Married-spouse-absent 
+Precision 0.9375 
+Recall 0.4411764705882353 
+Fbeta 0.6 
+
+Slice testing on marital-status with value Separated 
+Precision 1.0 
+Recall 0.5151515151515151 
+Fbeta 0.6799999999999999 
+
+Slice testing on marital-status with value Married-AF-spouse 
+Precision 1.0 
+Recall 0.5 
+Fbeta 0.6666666666666666 
+
+Slice testing on marital-status with value Widowed 
+Precision 1.0 
+Recall 0.47058823529411764 
+Fbeta 0.6399999999999999 
+
+Slice testing on occupation with value Adm-clerical 
+Precision 0.8185053380782918 
+Recall 0.4536489151873767 
+Fbeta 0.5837563451776651 
+
+Slice testing on occupation with value Exec-managerial 
+Precision 0.8565423016290068 
+Recall 0.8282520325203252 
+Fbeta 0.8421596486695945 
+
+Slice testing on occupation with value Handlers-cleaners 
+Precision 0.7428571428571429 
+Recall 0.3023255813953488 
+Fbeta 0.42975206611570244 
+
+Slice testing on occupation with value Prof-specialty 
+Precision 0.8345588235294118 
+Recall 0.8547606239913932 
+Fbeta 0.8445389317034281 
+
+Slice testing on occupation with value Other-service 
+Precision 0.9714285714285714 
+Recall 0.24817518248175183 
+Fbeta 0.3953488372093023 
+
+Slice testing on occupation with value Sales 
+Precision 0.8157894736842105 
+Recall 0.5991861648016277 
+Fbeta 0.6909090909090909 
+
+Slice testing on occupation with value Craft-repair 
+Precision 0.8622754491017964 
+Recall 0.310010764262648 
+Fbeta 0.4560570071258907 
+
+Slice testing on occupation with value Transport-moving 
+Precision 1.0 
+Recall 0.271875 
+Fbeta 0.42751842751842745 
+
+Slice testing on occupation with value Farming-fishing 
+Precision 0.9245283018867925 
+Recall 0.4260869565217391 
+Fbeta 0.5833333333333334 
+
+Slice testing on occupation with value Machine-op-inspct 
+Precision 0.9 
+Recall 0.252 
+Fbeta 0.39374999999999993 
+
+Slice testing on occupation with value Tech-support 
+Precision 0.875 
+Recall 0.5441696113074205 
+Fbeta 0.6710239651416122 
+
+Slice testing on occupation with value ? 
+Precision 0.9134615384615384 
+Recall 0.4973821989528796 
+Fbeta 0.6440677966101696 
+
+Slice testing on occupation with value Protective-serv 
+Precision 0.8631578947368421 
+Recall 0.3886255924170616 
+Fbeta 0.5359477124183007 
+
+Slice testing on occupation with value Armed-Forces 
+Precision 1.0 
+Recall 1.0 
+Fbeta 1.0 
+
+Slice testing on occupation with value Priv-house-serv 
+Precision 1.0 
+Recall 1.0 
+Fbeta 1.0 
+
+Slice testing on relationship with value Not-in-family 
+Precision 0.9869109947643979 
+Recall 0.44042056074766356 
+Fbeta 0.6090468497576736 
+
+Slice testing on relationship with value Husband 
+Precision 0.8294243070362474 
+Recall 0.6573166610341331 
+Fbeta 0.7334087481146305 
+
+Slice testing on relationship with value Wife 
+Precision 0.8674698795180723 
+Recall 0.676510067114094 
+Fbeta 0.7601809954751133 
+
+Slice testing on relationship with value Own-child 
+Precision 0.9655172413793104 
+Recall 0.417910447761194 
+Fbeta 0.5833333333333333 
+
+Slice testing on relationship with value Unmarried 
+Precision 1.0 
+Recall 0.45871559633027525 
+Fbeta 0.628930817610063 
+
+Slice testing on relationship with value Other-relative 
+Precision 1.0 
+Recall 0.5135135135135135 
+Fbeta 0.6785714285714285 
+
+Slice testing on race with value White 
+Precision 0.844853778959362 
+Recall 0.6251229450611212 
+Fbeta 0.7185657756601793 
+
+Slice testing on race with value Black 
+Precision 0.8901960784313725 
+Recall 0.58656330749354 
+Fbeta 0.7071651090342679 
+
+Slice testing on race with value Asian-Pac-Islander 
+Precision 0.8524590163934426 
+Recall 0.7536231884057971 
+Fbeta 0.8 
+
+Slice testing on race with value Amer-Indian-Eskimo 
+Precision 0.9523809523809523 
+Recall 0.5555555555555556 
+Fbeta 0.7017543859649122 
+
+Slice testing on race with value Other 
+Precision 0.9333333333333333 
+Recall 0.56 
+Fbeta 0.7000000000000001 
+
+Slice testing on sex with value Male 
+Precision 0.839968152866242 
+Recall 0.6334434103872711 
+Fbeta 0.7222317302755434 
+
+Slice testing on sex with value Female 
+Precision 0.8983268983268984 
+Recall 0.5920271416454622 
+Fbeta 0.7137014314928425 
+
+Slice testing on native-country with value United-States 
+Precision 0.8460952380952381 
+Recall 0.6194394087296053 
+Fbeta 0.7152403188149103 
+
+Slice testing on native-country with value Cuba 
+Precision 1.0 
+Recall 0.68 
+Fbeta 0.8095238095238095 
+
+Slice testing on native-country with value Jamaica 
+Precision 0.75 
+Recall 0.3 
+Fbeta 0.4285714285714285 
+
+Slice testing on native-country with value India 
+Precision 0.8222222222222222 
+Recall 0.925 
+Fbeta 0.8705882352941177 
+
+Slice testing on native-country with value ? 
+Precision 0.8412698412698413 
+Recall 0.726027397260274 
+Fbeta 0.7794117647058825 
+
+Slice testing on native-country with value Mexico 
+Precision 0.9230769230769231 
+Recall 0.36363636363636365 
+Fbeta 0.5217391304347827 
+
+Slice testing on native-country with value South 
+Precision 0.8 
+Recall 0.75 
+Fbeta 0.7741935483870969 
+
+Slice testing on native-country with value Puerto-Rico 
+Precision 1.0 
+Recall 0.8333333333333334 
+Fbeta 0.9090909090909091 
+
+Slice testing on native-country with value Honduras 
+Precision 1.0 
+Recall 1.0 
+Fbeta 1.0 
+
+Slice testing on native-country with value England 
+Precision 0.7916666666666666 
+Recall 0.6333333333333333 
+Fbeta 0.7037037037037038 
+
+Slice testing on native-country with value Canada 
+Precision 0.8529411764705882 
+Recall 0.7435897435897436 
+Fbeta 0.7945205479452054 
+
+Slice testing on native-country with value Germany 
+Precision 0.8787878787878788 
+Recall 0.6590909090909091 
+Fbeta 0.7532467532467532 
+
+Slice testing on native-country with value Iran 
+Precision 0.7777777777777778 
+Recall 0.7777777777777778 
+Fbeta 0.7777777777777778 
+
+Slice testing on native-country with value Philippines 
+Precision 0.9019607843137255 
+Recall 0.7540983606557377 
+Fbeta 0.8214285714285715 
+
+Slice testing on native-country with value Italy 
+Precision 0.8823529411764706 
+Recall 0.6 
+Fbeta 0.7142857142857143 
+
+Slice testing on native-country with value Poland 
+Precision 0.8888888888888888 
+Recall 0.6666666666666666 
+Fbeta 0.761904761904762 
+
+Slice testing on native-country with value Columbia 
+Precision 0.6666666666666666 
+Recall 1.0 
+Fbeta 0.8 
+
+Slice testing on native-country with value Cambodia 
+Precision 1.0 
+Recall 0.42857142857142855 
+Fbeta 0.6 
+
+Slice testing on native-country with value Thailand 
+Precision 1.0 
+Recall 0.6666666666666666 
+Fbeta 0.8 
+
+Slice testing on native-country with value Ecuador 
+Precision 1.0 
+Recall 0.5 
+Fbeta 0.6666666666666666 
+
+Slice testing on native-country with value Laos 
+Precision 1.0 
+Recall 0.5 
+Fbeta 0.6666666666666666 
+
+Slice testing on native-country with value Taiwan 
+Precision 0.9473684210526315 
+Recall 0.9 
+Fbeta 0.9230769230769231 
+
+Slice testing on native-country with value Haiti 
+Precision 1.0 
+Recall 0.75 
+Fbeta 0.8571428571428571 
+
+Slice testing on native-country with value Portugal 
+Precision 1.0 
+Recall 0.25 
+Fbeta 0.4 
+
+Slice testing on native-country with value Dominican-Republic 
+Precision 1.0 
+Recall 0.5 
+Fbeta 0.6666666666666666 
+
+Slice testing on native-country with value El-Salvador 
+Precision 1.0 
+Recall 0.8888888888888888 
+Fbeta 0.9411764705882353 
+
+Slice testing on native-country with value France 
+Precision 0.8333333333333334 
+Recall 0.8333333333333334 
+Fbeta 0.8333333333333334 
+
+Slice testing on native-country with value Guatemala 
+Precision 1.0 
+Recall 0.3333333333333333 
+Fbeta 0.5 
+
+Slice testing on native-country with value China 
+Precision 0.8636363636363636 
+Recall 0.95 
+Fbeta 0.9047619047619048 
+
+Slice testing on native-country with value Japan 
+Precision 0.8181818181818182 
+Recall 0.75 
+Fbeta 0.7826086956521738 
+
+Slice testing on native-country with value Yugoslavia 
+Precision 0.75 
+Recall 0.5 
+Fbeta 0.6 
+
+Slice testing on native-country with value Peru 
+Precision 1.0 
+Recall 1.0 
+Fbeta 1.0 
+
+Slice testing on native-country with value Outlying-US(Guam-USVI-etc) 
+Precision 1.0 
+Recall 1.0 
+Fbeta 1.0 
+
+Slice testing on native-country with value Scotland 
+Precision 1.0 
+Recall 1.0 
+Fbeta 1.0 
+
+Slice testing on native-country with value Trinadad&Tobago 
+Precision 1.0 
+Recall 0.5 
+Fbeta 0.6666666666666666 
+
+Slice testing on native-country with value Greece 
+Precision 0.75 
+Recall 0.75 
+Fbeta 0.75 
+
+Slice testing on native-country with value Nicaragua 
+Precision 1.0 
+Recall 1.0 
+Fbeta 1.0 
+
+Slice testing on native-country with value Vietnam 
+Precision 0.6 
+Recall 0.6 
+Fbeta 0.6 
+
+Slice testing on native-country with value Hong 
+Precision 1.0 
+Recall 0.8333333333333334 
+Fbeta 0.9090909090909091 
+
+Slice testing on native-country with value Ireland 
+Precision 1.0 
+Recall 0.6 
+Fbeta 0.7499999999999999 
+
+Slice testing on native-country with value Hungary 
+Precision 1.0 
+Recall 0.3333333333333333 
+Fbeta 0.5 
+
+Slice testing on native-country with value Holand-Netherlands 
+Precision 1.0 
+Recall 1.0 
+Fbeta 1.0 
+

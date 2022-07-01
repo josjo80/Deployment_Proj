@@ -1,8 +1,9 @@
 from fastapi import FastAPI
 # BaseModel from Pydantic is used to define data objects.
 from pydantic import BaseModel
-
+import os
 import joblib
+import pandas as pd
 
 from starter.ml.data import process_data
 from starter.ml.model import inference
@@ -53,7 +54,7 @@ class DataSample(BaseModel):
 
 loaded_model = joblib.load('starter/rf_model.pkl')
 loaded_encoder = joblib.load('starter/encoder.pkl')
-loaded_lb = joblib.load('starter/label_encoder.pkl')
+loaded_lb = joblib.load('starter/label_enc.pkl')
 
 cat_features = [
     "workclass",
@@ -72,9 +73,9 @@ app = FastAPI()
 @app.post("/prediction")
 async def prediction(sample: DataSample):
     
-    sample = {key.replace('_','-'): [value] for key, value in data.__dict__.items()}
+    sample = {key.replace('_','-'): [value] for key, value in sample.__dict__.items()}
     data_sample = pd.DataFrame.from_dict(sample)
-    data_sample = process_data(data_sample, 
+    data_sample, _, _, _ = process_data(data_sample, 
                                 categorical_features=cat_features, 
                                 label=None, 
                                 training=False, 
@@ -82,7 +83,7 @@ async def prediction(sample: DataSample):
                                 lb=loaded_lb)
     item = inference(loaded_model, data_sample)
 
-    item = lb.inverse_transform(item)
+    item = loaded_lb.inverse_transform(item)
 
     return item[0]
 
