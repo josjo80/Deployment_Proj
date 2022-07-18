@@ -1,5 +1,5 @@
-from model import compute_model_metrics, inference
-from data import process_data
+from . import model
+from . import data
 import os
 import joblib
 import numpy as np
@@ -41,12 +41,12 @@ loaded_lb = joblib.load('../label_enc.pkl')
 
 train, test = train_test_split(data, test_size=0.20)
 
-X_test, y_test, _, _ = process_data(
+X_test, y_test, _, _ = data.process_data(
     test, categorical_features=cat_features, label="salary", training=False,
     encoder=loaded_encoder, lb=loaded_lb
 )
 
-pred = inference(loaded_model, X_test)
+pred = model.inference(loaded_model, X_test)
 
 
 def test_save_model():
@@ -71,5 +71,5 @@ def test_compute_model_metrics():
     Function tests compute_model_metrics function
     '''
 
-    prec, _, _ = compute_model_metrics(y_test, pred)
+    prec, _, _ = model.compute_model_metrics(y_test, pred)
     assert isinstance(prec, float)
