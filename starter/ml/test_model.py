@@ -3,6 +3,8 @@ from data import process_data
 import os
 import joblib
 import numpy as np
+import pandas as pd
+from sklearn.model_selection import train_test_split
 
 sample = {
 "age":48,
@@ -31,11 +33,18 @@ cat_features = [
     "sex",
     "native-country",
 ]
-X_test, y_test, encoder, lb = process_data(
-    sample, categorical_features=cat_features, label="salary", training=True
-)
 
-loaded_model = joblib.load('rf_model.pkl')
+data = pd.read_csv("../../census_mod.csv")
+loaded_model = joblib.load('../rf_model.pkl')
+loaded_encoder = joblib.load('../encoder.pkl')
+loaded_lb = joblib.load('../label_enc.pkl')
+
+train, test = train_test_split(data, test_size=0.20)
+
+X_test, y_test, _, _ = process_data(
+    test, categorical_features=cat_features, label="salary", training=False,
+    encoder=loaded_encoder, lb=loaded_lb
+)
 
 pred = inference(loaded_model, X_test)
 
