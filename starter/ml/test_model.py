@@ -54,16 +54,16 @@ def test_save_model():
     Function tests save_model function
     '''
 
-    assert os.file.isfile('rf_model.pkl')
-    assert os.file.isfile('encoder.pkl')
-    assert os.file.isfile('label_enc.pkl')
+    assert os.path.exists('./starter/rf_model.pkl')
+    assert os.path.exists('./starter/encoder.pkl')
+    assert os.path.exists('./starter/label_enc.pkl')
 
 def test_predict():
     '''
     Function tests predict function
     '''
     
-    assert isinstance(pred, np.array)
+    assert isinstance(pred, np.ndarray)
 
 
 def test_compute_model_metrics():

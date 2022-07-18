@@ -2,6 +2,7 @@ import requests
 from fastapi import FastAPI
 from fastapi.testclient import TestClient
 from main import app
+import pandas as pd
 
 client = TestClient(app)
 
@@ -10,7 +11,7 @@ def test_api_root():
     response = client.get('/')
     
     assert response.status_code == 200
-    assert response.json() == "Welcome to my Salary prediction model!"
+    assert response.json() == {"Welcome to my Salary prediction model!"}
 
 def test_sample_neg():
 
@@ -30,6 +31,8 @@ def test_sample_neg():
             "native_country": "United-States",
             "salary": '<=50K'
     }
+
+    samp = pd.DataFrame.from_dict(samp)
 
     response = client.post('/prediction/', json=samp)
 
@@ -56,6 +59,8 @@ def test_sample_pos():
             "salary": ">50K"
     }
 
+    samp = pd.DataFrame.from_dict(samp)
+    
     response = client.post('/prediction/', json=samp)
 
     assert response.status_code == 200
