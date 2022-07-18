@@ -34,10 +34,10 @@ cat_features = [
     "native-country",
 ]
 
-data = pd.read_csv("../../census_mod.csv")
-loaded_model = joblib.load('../rf_model.pkl')
-loaded_encoder = joblib.load('../encoder.pkl')
-loaded_lb = joblib.load('../label_enc.pkl')
+data = pd.read_csv("./census_mod.csv")
+loaded_model = joblib.load('./starter/rf_model.pkl')
+loaded_encoder = joblib.load('./starter/encoder.pkl')
+loaded_lb = joblib.load('./starter/label_enc.pkl')
 
 train, test = train_test_split(data, test_size=0.20)
 
