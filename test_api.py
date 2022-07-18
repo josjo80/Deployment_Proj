@@ -15,19 +15,19 @@ def test_api_root():
 def test_sample_neg():
 
     samp = {"age": 37,
-            "workclass": Private,
+            "workclass": "Private",
             "fnlgt":284582,
-            "education": Masters,
+            "education": "Masters",
             "education_num":14,
-            "marital_status": Married-civ-spouse,
-            "occupation": Exec-managerial,
-            "relationship": Wife,
-            "race": White,
-            "sex": Female,
+            "marital_status": "Married-civ-spouse",
+            "occupation": "Exec-managerial",
+            "relationship": "Wife",
+            "race": "White",
+            "sex": "Female",
             "capital_gain": 0,
             "capital_loss": 0,
             "hours_per_week": 40,
-            "native_country": United-States,
+            "native_country": "United-States",
             "salary": '<=50K'
     }
 
