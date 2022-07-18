@@ -42,7 +42,7 @@ loaded_lb = joblib.load('./starter/label_enc.pkl')
 train, test = train_test_split(data_samples, test_size=0.20)
 
 X_test, y_test, _, _ = data.process_data(
-    test, categorical_features=cat_features, label="salary", training=True,
+    test, categorical_features=cat_features, label="salary", training=False,
     encoder=loaded_encoder, lb=loaded_lb
 )
 
