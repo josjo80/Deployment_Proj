@@ -32,7 +32,7 @@ def test_sample_neg():
             "salary": '<=50K'
     }
 
-    samp = pd.DataFrame.from_dict(samp)
+    #samp = pd.DataFrame.from_dict(samp)
 
     response = client.post('/prediction/', json=samp)
 
@@ -59,8 +59,8 @@ def test_sample_pos():
             "salary": ">50K"
     }
 
-    samp = pd.DataFrame.from_dict(samp)
-    
+    #samp = pd.DataFrame.from_dict(samp)
+
     response = client.post('/prediction/', json=samp)
 
     assert response.status_code == 200
