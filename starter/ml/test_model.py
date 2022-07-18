@@ -1,5 +1,5 @@
-from ml.model import compute_model_metrics, inference
-from ml.data import process_data
+from model import compute_model_metrics, inference
+from data import process_data
 import os
 import joblib
 import numpy as np
