@@ -18,8 +18,8 @@ data = {
     "native_country": "United-States",
     "salary": ">50K"}
 
-r = requests.post("http://127.0.0.1:8000/prediction/", 
-data=json.dumps(data))
+r = requests.post("http://127.0.0.1:8000/prediction/",
+    data=json.dumps(data))
 # r = requests.post("https://mldevopsdemo2.herokuapp.com/predict/", \
 # data=json.dumps(data))
 
