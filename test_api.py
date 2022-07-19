@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from fastapi.testclient import TestClient
 from main import app
 import pandas as pd
+import json
 
 client = TestClient(app)
 
@@ -11,32 +12,31 @@ def test_api_root():
     response = client.get('/')
     
     assert response.status_code == 200
-    assert response.json() == {"Welcome to my Salary prediction model!"}
+    assert response.json() == {'welcome': 'Welcome to my Salary prediction model!'}
 
 def test_sample_neg():
 
     samp = {"age": 37,
             "workclass": "Private",
             "fnlgt":284582,
-            "education": "Masters",
+            "education": "9th",
             "education_num":14,
             "marital_status": "Married-civ-spouse",
             "occupation": "Exec-managerial",
             "relationship": "Wife",
-            "race": "White",
+            "race": "Black",
             "sex": "Female",
             "capital_gain": 0,
             "capital_loss": 0,
-            "hours_per_week": 40,
-            "native_country": "United-States"
+            "hours_per_week": 16,
+            "native_country": "Jamaica",
+            "salary": '<=50K'
     }
 
-    #samp = pd.DataFrame.from_dict(samp)
-
-    response = client.post('/prediction/', json=samp)
+    response = client.post('prediction', json=samp)
 
     assert response.status_code == 200
-    assert response.json() == '<=50k'
+    assert response.json() == '<=50K'
 
 def test_sample_pos():
 
@@ -54,12 +54,11 @@ def test_sample_pos():
             "capital_gain": 0,
             "capital_loss": 0,
             "hours_per_week": 50,
-            "native_country": "United-States"
+            "native_country": "United-States",
+            "salary": ">50K"
     }
 
-    #samp = pd.DataFrame.from_dict(samp)
-
-    response = client.post('/prediction/', json=samp)
+    response = client.post('prediction', json=samp)
 
     assert response.status_code == 200
-    assert response.json() == '>50k'
+    assert response.json() == '>50K'
