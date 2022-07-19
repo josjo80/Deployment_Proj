@@ -12,7 +12,7 @@ WARN_COLOR = '\033[93m'
 
 def run_sanity_check(test_dir):
 
-    #assert path.isdir(test_dir), FAIL_COLOR+f"No direcotry named
+    # assert path.isdir(test_dir), FAIL_COLOR+f"No direcotry named
     # {test_dir} found in {os.getcwd()}"
     print('This script will perform a sanity test to ensure your code \
         meets the criteria in the rubric.\n')
@@ -73,7 +73,8 @@ def run_sanity_check(test_dir):
             source = inspect.getsource(getattr(module, func))
             if source.find('.status_code') != -1:
                 TEST_FOR_GET_METHOD_RESPONSE_CODE = True
-            if (source.find('.json') != -1) or (source.find('json.loads') != -1):
+            if (source.find('.json') != -1) or \
+                (source.find('json.loads') != -1):
                 TEST_FOR_GET_METHOD_RESPONSE_BODY = True
 
         if not TEST_FOR_GET_METHOD_RESPONSE_CODE:
@@ -100,7 +101,8 @@ def run_sanity_check(test_dir):
     if not test_functions_for_post:
         print(FAIL_COLOR + f"[{WARNING_COUNT}]")
         WARNING_COUNT += 1
-        print(FAIL_COLOR + "No test cases were detected for the POST() method.")
+        print(FAIL_COLOR + "No test cases were detected for the \
+            POST() method.")
         print(
             FAIL_COLOR +
             "Please make sure you have TWO test cases for the POST() method." +
@@ -126,7 +128,8 @@ def run_sanity_check(test_dir):
             source = inspect.getsource(getattr(module, func))
             if source.find('.status_code') != -1:
                 TEST_FOR_POST_METHOD_RESPONSE_CODE = True
-            if (source.find('.json') != -1) or (source.find('json.loads') != -1):
+            if (source.find('.json') != -1) or \
+                (source.find('json.loads') != -1):
                 TEST_FOR_POST_METHOD_RESPONSE_BODY = True
                 COUNT_POST_METHOD_TEST_FOR_INFERENCE_RESULT += 1
 
@@ -147,7 +150,7 @@ def run_sanity_check(test_dir):
 
         if len(
                 test_functions_for_post) >= 2 and \
-                    COUNT_POST_METHOD_TEST_FOR_INFERENCE_RESULT < 2:
+                COUNT_POST_METHOD_TEST_FOR_INFERENCE_RESULT < 2:
             print(FAIL_COLOR + f"[{WARNING_COUNT}]")
             WARNING_COUNT += 1
             print(
