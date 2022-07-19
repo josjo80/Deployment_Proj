@@ -3,7 +3,7 @@
 For additional information see the Model Card paper: https://arxiv.org/pdf/1810.03993.pdf
 
 ## Model Details
-This model is based on census data and is used to predict the binary outcome of each individual's salary. The output is >$50k or <=$50k.
+This model is based on census data and is used to predict the binary outcome of each individual's salary. The output is `>$50k` or `<=$50k`.
 To run, use:
 >python3 -m train_model
 ## Intended Use
@@ -18,4 +18,4 @@ Precision 0.7927773000859846, Recall 0.5857687420584498, FBeta 0.673730361709901
 ## Ethical Considerations
 As with all data that includes personal information, care should be taken to ensure that it is deanonymized and that biases have been tested with respect to race. This data does include race and should be tested for biases.
 ## Caveats and Recommendations
-Test for biases in the data. Build a neural network to improve performance of model. Conduct further feature engineering.
+Test for biases in the data using Aequitas. Build a neural network to improve performance of model. Conduct further feature engineering.
