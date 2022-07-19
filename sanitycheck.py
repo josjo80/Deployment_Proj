@@ -75,7 +75,7 @@ def run_sanity_check(test_dir):
                 TEST_FOR_GET_METHOD_RESPONSE_CODE = True
             if (source.find('.json') != -1) or \
                 (source.find('json.loads') != -1):
-                TEST_FOR_GET_METHOD_RESPONSE_BODY = True
+                    TEST_FOR_GET_METHOD_RESPONSE_BODY = True
 
         if not TEST_FOR_GET_METHOD_RESPONSE_CODE:
             print(FAIL_COLOR + f"[{WARNING_COUNT}]")
@@ -130,8 +130,8 @@ def run_sanity_check(test_dir):
                 TEST_FOR_POST_METHOD_RESPONSE_CODE = True
             if (source.find('.json') != -1) or \
                 (source.find('json.loads') != -1):
-                TEST_FOR_POST_METHOD_RESPONSE_BODY = True
-                COUNT_POST_METHOD_TEST_FOR_INFERENCE_RESULT += 1
+                    TEST_FOR_POST_METHOD_RESPONSE_BODY = True
+                    COUNT_POST_METHOD_TEST_FOR_INFERENCE_RESULT += 1
 
         if not TEST_FOR_POST_METHOD_RESPONSE_CODE:
             print(FAIL_COLOR + f"[{WARNING_COUNT}]")
