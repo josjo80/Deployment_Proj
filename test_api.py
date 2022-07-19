@@ -28,8 +28,7 @@ def test_sample_neg():
             "capital_gain": 0,
             "capital_loss": 0,
             "hours_per_week": 40,
-            "native_country": "United-States",
-            "salary": '<=50K'
+            "native_country": "United-States"
     }
 
     #samp = pd.DataFrame.from_dict(samp)
@@ -55,8 +54,7 @@ def test_sample_pos():
             "capital_gain": 0,
             "capital_loss": 0,
             "hours_per_week": 50,
-            "native_country": "United-States",
-            "salary": ">50K"
+            "native_country": "United-States"
     }
 
     #samp = pd.DataFrame.from_dict(samp)
