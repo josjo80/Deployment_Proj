@@ -7,21 +7,21 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 sample = {
-"age":48,
-"workclass": "State-gov",
-"fnlgt": 327886,
-"education": "Doctorate",
-"education-num": 16,
-"marital-status": "Divorced",
-"occupation": "Prof-specialty",
-"relationship": "Own-child",
-"race": "White",
-"sex": "Male",
-"capital-gain": 0,
-"capital-loss": 0,
-"hours-per-week": 50,
-"native-country": "United-States",
-"salary": ">50K"}
+    "age": 48,
+    "workclass": "State-gov",
+    "fnlgt": 327886,
+    "education": "Doctorate",
+    "education-num": 16,
+    "marital-status": "Divorced",
+    "occupation": "Prof-specialty",
+    "relationship": "Own-child",
+    "race": "White",
+    "sex": "Male",
+    "capital-gain": 0,
+    "capital-loss": 0,
+    "hours-per-week": 50,
+    "native-country": "United-States",
+    "salary": ">50K"}
 
 cat_features = [
     "workclass",
@@ -58,11 +58,12 @@ def test_save_model():
     assert os.path.exists('./starter/encoder.pkl')
     assert os.path.exists('./starter/label_enc.pkl')
 
+
 def test_predict():
     '''
     Function tests predict function
     '''
-    
+
     assert isinstance(pred, np.ndarray)
 
 

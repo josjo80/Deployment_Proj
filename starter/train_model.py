@@ -7,7 +7,8 @@ import pandas as pd
 
 data = pd.read_csv("../census_mod.csv")
 
-# Optional enhancement, use K-fold cross validation instead of a train-test split.
+# Optional enhancement, use K-fold cross validation instead of a
+# train-test split.
 train, test = train_test_split(data, test_size=0.20)
 
 cat_features = [
@@ -30,7 +31,7 @@ X_test, y_test, _, _ = process_data(
 )
 
 # Train and save a model.
-trained_model = train_model(X_train,y_train)
+trained_model = train_model(X_train, y_train)
 
 y_preds = inference(trained_model, X_test)
 
@@ -41,23 +42,23 @@ print(f"Precision {precision}, Recall {recall}, FBeta {fbeta}")
 save_model(trained_model, train_encoder, train_lb)
 
 
-#Slice testing
+# Slice testing
 def slice_testing(df, model, cat_features, encoder, lb):
 
-    #Iterate through classes
+    # Iterate through classes
     for cats in cat_features:
         for e in df[cats].unique():
-            tmp_df = df[df[cats]==e]
-            
+            tmp_df = df[df[cats] == e]
+
             x, y, _, _ = process_data(
-                tmp_df, categorical_features=cat_features, 
-                label="salary", 
+                tmp_df, categorical_features=cat_features,
+                label="salary",
                 training=False,
-                encoder = train_encoder,
-                lb = train_lb
+                encoder=train_encoder,
+                lb=train_lb
             )
 
-            preds = inference(model,x)
+            preds = inference(model, x)
             precision, recall, fbeta = compute_model_metrics(y, preds)
             with open('slice_output.txt', 'a') as fil:
                 fil.write(f"Slice testing on {cats} with value {e} \n")
@@ -65,5 +66,6 @@ def slice_testing(df, model, cat_features, encoder, lb):
                 fil.write(f"Recall {recall} \n")
                 fil.write(f"Fbeta {fbeta} \n")
                 fil.write("\n")
+
 
 slice_testing(data, trained_model, cat_features, train_encoder, train_lb)

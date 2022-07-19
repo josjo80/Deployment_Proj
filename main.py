@@ -16,6 +16,8 @@ if "DYNO" in os.environ and os.path.isdir(".dvc"):
     os.system("rm -r .dvc .apt/usr/lib/dvc")
 
 # Declare the data object with its components and their type.
+
+
 class DataSample(BaseModel):
     age: float
     workclass: str
@@ -35,7 +37,7 @@ class DataSample(BaseModel):
     class Config:
         schema_extra = {
             'example': {
-                "age":48,
+                "age": 48,
                 "workclass": "State-gov",
                 "fnlgt": 327886,
                 "education": "Doctorate",
@@ -51,6 +53,7 @@ class DataSample(BaseModel):
                 "native_country": "United-States",
                 "salary": ">50K"}
         }
+
 
 loaded_model = joblib.load('starter/rf_model.pkl')
 loaded_encoder = joblib.load('starter/encoder.pkl')
@@ -70,22 +73,26 @@ cat_features = [
 app = FastAPI()
 
 # This allows sending of data (our TaggedItem) via POST to the API.
+
+
 @app.post("/prediction")
 async def prediction(sample: DataSample):
-    
-    sample = {key.replace('_','-'): [value] for key, value in sample.__dict__.items()}
+
+    sample = {key.replace('_', '-'): [value]
+              for key, value in sample.__dict__.items()}
     data_sample = pd.DataFrame.from_dict(sample)
-    data_sample, _, _, _ = process_data(data_sample, 
-                                categorical_features=cat_features, 
-                                label=None, 
-                                training=False, 
-                                encoder=loaded_encoder, 
-                                lb=loaded_lb)
+    data_sample, _, _, _ = process_data(data_sample,
+                                        categorical_features=cat_features,
+                                        label=None,
+                                        training=False,
+                                        encoder=loaded_encoder,
+                                        lb=loaded_lb)
     item = inference(loaded_model, data_sample)
 
     item = loaded_lb.inverse_transform(item)
 
     return item[0]
+
 
 @app.get("/")
 async def welcome():

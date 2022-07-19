@@ -1,5 +1,5 @@
 from sklearn.metrics import fbeta_score, precision_score, recall_score
-from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
+from sklearn.ensemble import RandomForestClassifier
 import joblib
 
 
@@ -63,6 +63,7 @@ def inference(model, X):
         Predictions from the model.
     """
     return model.predict(X)
+
 
 def save_model(model, encoder, lb):
     joblib.dump(model, 'rf_model.pkl')
